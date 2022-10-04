@@ -32,8 +32,14 @@ int main(int argc, char** argv) {
 	
 	//Ingresar numero de canales
 	int numeroCanales; 
+	val2:
 	cout<<"Introduzca el numero de canales (Opciones: 1-32)"<<endl;
     cin>>numeroCanales;
+    if(numeroCanales>32||numeroCanales<1)
+	{
+        cout<<"Error. Ingresa un numero de canales valido"<<std::endl;
+      	goto val2;
+    }
     
     //Se crean los objetos de la subclase con base al numero de canales
     cout<<"Se activaron "<<numeroCanales<<" canales"<<endl;	

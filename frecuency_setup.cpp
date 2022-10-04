@@ -13,8 +13,14 @@ void Frecuency::Captura(){
   ADC::Captura();
   if(_opcion==2)
   {
+  	valido4:
   	cout<<"Ingresa ACK (Opciones: 2,4,8,16,32,64)"<<endl; //INGRESAR ACK
-    cin>>_ack;											  //CALCULAR FRECUENCIA
+    cin>>_ack;
+	if( _ack!=2 && _ack!=4 && _ack!=8 && _ack!=16 && _ack!=32 &&_ack!=64)
+	{
+  		cout<<"Error. Ingresa un valor de ACK valido"<<endl;
+    	goto valido4;
+  	}											  //CALCULAR FRECUENCIA
     _Fs=8000/_ack;
   }
 

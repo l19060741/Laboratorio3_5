@@ -30,12 +30,25 @@ ADC::ADC(){
 void ADC::Captura(){
 	
 	cout<<endl<<"** Introduce Datos **"<<endl;
+	val1:
 	cout<<"Dame la resolucion (Opciones: 8, 10, 12): ";
 	cin>> _resolution;
+	if(_resolution!=8&&_resolution!=10&&_resolution!=12)
+	{
+		cout<<"Error. Ingresa una resolucion valida."<<endl;
+		goto val1;
+	}
+	
+	val3:
 	cout<<"Opciones para fruencia: "<<endl;
 	cout<<"1.Ingresarla manualmente"<<endl;
 	cout<<"2.Calcularla mediante ack"<<endl;
 	cin>> _opcion;
+	if(_opcion!=1&&_opcion!=2)
+	{
+		cout<<"Error. Ingresa una opcion valida."<<endl;
+		goto val3;
+	}
 	if(_opcion==1)
 	{
 		cout<<"Dame la frecuencia: ";
