@@ -1,0 +1,35 @@
+# Project: LAB3
+# Makefile created by Dev-C++ 5.4.2
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o adc_setup.o frecuency_setup.o
+LINKOBJ  = main.o adc_setup.o frecuency_setup.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW32/lib" -static-libstdc++ -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/include"
+BIN      = LAB3.exe
+CXXFLAGS = $(CXXINCS) -ansi -pedantic-errors -Wall -Wconversion -g
+CFLAGS   = $(INCS) -ansi -pedantic-errors -Wall -Wconversion -g
+RM       = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+adc_setup.o: adc_setup.cpp
+	$(CPP) -c adc_setup.cpp -o adc_setup.o $(CXXFLAGS)
+
+frecuency_setup.o: frecuency_setup.cpp
+	$(CPP) -c frecuency_setup.cpp -o frecuency_setup.o $(CXXFLAGS)
