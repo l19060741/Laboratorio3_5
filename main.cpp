@@ -21,7 +21,7 @@ using namespace std;
 int main(int argc, char** argv) {
 	
 	//PORTADA
-	cout<<"ARQUITECTURA DE PROGRAMACIÓN PARA HARDWARE"<<endl;
+	cout<<"ARQUITECTURA DE PROGRAMACION PARA HARDWARE"<<endl;
 	cout<<"LABORATORIO 3"<<endl;
 	cout<<"ANAHI GONZALEZ HOLGUIN"<<endl;
 	cout<<"CONFIGURACION DEL ADC"<<endl;

@@ -23,5 +23,7 @@ void Frecuency::Captura(){
   	}											  //CALCULAR FRECUENCIA
     _Fs=8000/_ack;
   }
+  
+  
 
 }
